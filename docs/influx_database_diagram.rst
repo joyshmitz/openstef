@@ -2,10 +2,10 @@
     SPDX-FileCopyrightText: 2017-2023 Contributors to the OpenSTEF project <korte.termijn.prognoses@alliander.com>
     SPDX-License-Identifier: MPL-2.0
 
-Overview of timeseries database schema
-============================================================
+Огляд схеми бази даних часових рядів
+====================================
 
-OpenSTEF uses a timeseries database to store all timeseries data. A diagram of its structure is shown bellow.
+OpenSTEF використовує базу даних часових рядів для зберігання всіх даних часових рядів. Схему її структури показано нижче.
 
 .. figure:: _static/influx_database_diagram.png
     :alt: Diagram InlfuxDB
