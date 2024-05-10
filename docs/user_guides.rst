@@ -4,17 +4,17 @@
 
 .. _user_guides:
 
-User guides
-===========
+Керівництво користувача
+=======================
 
-This page contains guides and links to resources that show how OpenSTEF can be used.
+TЦя сторінка містить інструкції та посилання на ресурси, які показують, як можна використовувати OpenSTEF.
 
-Pipelines - high level functionality
-------------------------------------
-OpenSTEF is designed around Pipelines (see :ref:`concepts <concepts>` for definition). Pipelines offer an easy way to train models, generate forecasts, and evaluate  forecasting performance.
+Трубопроводи - функціональність високого рівня
+----------------------------------------------
+OpenSTEF розроблено на основі трубопроводів (див. :ref:`concepts <concepts>` для визначення). Трубопроводи пропонують простий спосіб навчання моделей, генерування прогнозів та оцінювання ефективності прогнозування.
 
 
-The following pipelines are available:
+Доступні наступні трубопроводи:
 
 - :mod:`openstef.pipeline.train_model`
 - :mod:`openstef.pipeline.create_forecast`
@@ -23,33 +23,33 @@ The following pipelines are available:
 - :mod:`openstef.pipeline.create_basecase_forecast`
 - :mod:`openstef.pipeline.train_create_forecast_backtest`
 
-A great way to get started and become familiar with OpenSTEF pipelines is to have a look at
-`this GitHub repository that contains an assortment of Jupyter notebook examples <https://github.com/OpenSTEF/openstef-offline-example>`_. The repository
-even includes example data.
+Чудовий спосіб розпочати роботу та ознайомитися з трубопроводами OpenSTEF - це поглянути на
+`this GitHub repository that contains an assortment of Jupyter notebook examples <https://github.com/OpenSTEF/openstef-offline-example>`_. Репозиторій
+навіть містить приклади даних.
 
-You can run each example notebook locally without any setup required, apart from the `installation of the OpenSTEF package <https://pypi.org/project/openstef/>`_.
+Ви можете запустити кожен приклад блокнота локально без будь-яких налаштувань, окрім `installation of the OpenSTEF package <https://pypi.org/project/openstef/>`_.
 
-We encourage you to check out all the examples, but here is a list to get you started:
+Ми рекомендуємо вам ознайомитися з усіма прикладами, але ось список, з якого ви можете почати:
 
 - `How to train a model <https://github.com/OpenSTEF/openstef-offline-example/blob/master/examples/01.%20Train%20a%20model%20using%20high-level%20pipelines.ipynb>`_.
 - `How to create a forecast <https://github.com/OpenSTEF/openstef-offline-example/blob/master/examples/04.%20Test_on_difficult_cases.ipynb>`_.
 - `How evaluate the performance of model using a backtest  <https://github.com/OpenSTEF/openstef-offline-example/blob/master/examples/02.%20Evaluate%20performance%20using%20Backtest%20Pipeline.ipynb>`_.
 
-For more in-depth information on how to use and implement the pipelines in an operational setting, including code examples, see the :ref:`pipeline_user_guide` section of this documentation.
+Більш детальну інформацію про те, як використовувати та реалізовувати трубопроводи у робочому середовищі, включно з прикладами коду, можна знайти у розділі :ref:`pipeline_user_guide` цієї документації.
 
 
-Deploy as a full Forecasting application
+Розгортання як повноцінного додатку для прогнозування
 ----------------------------------------
-If you would like to setup a full forecasting application that is ready to be used in an operational setting with a
-backend datastore and graphical user interface frontent, this
-`GitHub repository contains a reference implementation <https://github.com/OpenSTEF/openstef-reference>`_  you can use as a starting point.
-This example implementation includes databases, a user interface, and example data.
+Якщо ви хочете налаштувати повноцінну програму прогнозування, готову до використання в робочому середовищі з
+внутрішнім сховищем даних і графічним інтерфейсом користувача, це
+`GitHub repository contains a reference implementation <https://github.com/OpenSTEF/openstef-reference>`_  ви можете використовувати як відправну точку.
+Цей приклад реалізації включає бази даних, користувацький інтерфейс та приклади даних.
 
-More information on what the architecture of such an application could look like can be found :ref:`here <application-architecture>`.
+Більше інформації про те, як може виглядати архітектура такого додатку, можна знайти :ref:`here <application-architecture>`.
 
 .. include:: dashboard.rst
-Screenshot of the operational dashboard showing the key functionality of OpenSTEF. Dashboard documentation can be found `here <https://raw.githack.com/OpenSTEF/.github/main/profile/html/openstef_dashboard_doc.html>`_.
+Скріншот операційної панелі, що показує ключові функціональні можливості OpenSTEF. Документацію до інформаційної панелі можна знайти `тут <https://raw.githack.com/OpenSTEF/.github/main/profile/html/openstef_dashboard_doc.html>`_.
 
-Example Jupyter notebooks
--------------------------
-Jupyter Notebooks demonstrating some of OpenSTEF's main functionality can be found at: https://github.com/OpenSTEF/openstef-offline-example.
+Приклади блокнотів Jupyter
+--------------------------
+Блокноти Jupyter, що демонструють деякі з основних функціональних можливостей OpenSTEF, можна знайти за адресою: https://github.com/OpenSTEF/openstef-offline-example.
