@@ -4,19 +4,19 @@
 
 .. _community:
 
-Community
+Спільнота
 =========
-Here you can find all information about the OpenSTEF community.
+Тут ви можете знайти всю інформацію про спільноту OpenSTEF.
 
-Technical Steering Committee
+Технічний керівний комітет
 ----------------------------
-The Technical Steering Committee (TSC) is responsible for:
+Технічний Наглядовий Комітет (TSC) відповідає за:
 
-General ambitions, objectives and goals of this project
-Guidelines and procedures and tool selection
-Architectural and (development) infrastructure choices
-Raise subjects/issues that are important for the direction/development of this project
-The Technical Steering Committee consists of the following members:
+Загальні амбіції, цілі та завдання цього проекту
+Керівні принципи, процедури та вибір інструментів
+Вибір архітектури та (розробки) інфраструктури 
+Підняття тем/питань, які є важливими для напрямку/розвитку цього проекту
+Технічний наглядовий комітет складається з наступних членів:
 
 * Frank Kreuwel
 * Jan Maarten van Doorn
@@ -24,25 +24,25 @@ The Technical Steering Committee consists of the following members:
 * Frederik Stoel
 * Jonita Ruiter
 
-More information, meeting notes and meeting links can be found `here <https://wiki.lfenergy.org/display/OS/OpenSTEF+Technical+Steering+Committee>`_:
+Більше інформації, звіти про зустрічі та посилання на зустрічі можна знайти `here <https://wiki.lfenergy.org/display/OS/OpenSTEF+Technical+Steering+Committee>`_:
 
-More information on project governance can be found `here <https://github.com/OpenSTEF/.github/blob/main/PROJECT_GOVERNANCE.md>`_.
+Більше інформації про управління проектами можна знайти `here <https://github.com/OpenSTEF/.github/blob/main/PROJECT_GOVERNANCE.md>`_.
 
-Roadmap
--------
-An actual overview of the openSTEF roadmap can be found `here <https://wiki.lfenergy.org/display/OS/OpenSTEF+Roadmap>`_.
+Дорожня карта
+-------------
+Актуальний огляд дорожньої карти openSTEF можна знайти тут `here <https://wiki.lfenergy.org/display/OS/OpenSTEF+Roadmap>`_.
 
-Contributing
-------------
-OpenSTEF welcomes contributions in all forms!
+Внесок
+------
+OpenSTEF вітає внески в усіх формах!
 
-For contributing in code have a look at the `contributing guidelines <https://github.com/OpenSTEF/.github/blob/main/CONTRIBUTING.md>`_.
+Щоб зробити внесок у код, перегляньте `contributing guidelines <https://github.com/OpenSTEF/.github/blob/main/CONTRIBUTING.md>`_.
 
-If you found a bug or would like to request a feature please open an issue `here <https://github.com/OpenSTEF/openstef/issues>`_
+Якщо ви знайшли помилку або хочете надіслати запит на функцію, відкрийте проблему `here <https://github.com/OpenSTEF/openstef/issues>`_
 
-During the four-weekly community meetings we discuss progress, refine open issues and explore collaboration possibilities. This meeting is open for anyone that is interested, more details and meeting links can be found `here <https://wiki.lfenergy.org/display/OS/Biweekly+Refinement>`_
+Під час чотиритижневих зустрічей спільноти ми обговорюємо прогрес, уточнюємо відкриті питання та досліджуємо можливості співпраці. Ця зустріч відкрита для всіх, хто зацікавлений, докладнішу інформацію та посилання на зустріч можна знайти `here <https://wiki.lfenergy.org/display/OS/Biweekly+Refinement>`_
 
-Support
--------
-Can't find what you are looking for? See possibilities for getting community Support `here <https://github.com/OpenSTEF/.github/blob/main/SUPPORT.md>`_.
-Or post your question in the `OpenSTEF teams channel <https://teams.microsoft.com/l/team/19%3ac08a513650524fc988afb296cd0358cc%40thread.tacv2/conversations?groupId=bfcb763a-3a97-4938-81d7-b14512aa537d&tenantId=697f104b-d7cb-48c8-ac9f-bd87105bafdc>`_.
+Підтримка
+---------
+Не можете знайти те, що шукаєте? Перегляньте можливості отримання підтримки спільноти `here <https://github.com/OpenSTEF/.github/blob/main/SUPPORT.md>`_.
+Або опублікуйте своє запитання в `OpenSTEF teams channel <https://teams.microsoft.com/l/team/19%3ac08a513650524fc988afb296cd0358cc%40thread.tacv2/conversations?groupId=bfcb763a-3a97-4938-81d7-b14512aa537d&tenantId=697f104b-d7cb-48c8-ac9f-bd87105bafdc>`_.

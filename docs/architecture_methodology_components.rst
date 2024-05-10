@@ -4,40 +4,39 @@
 
 .. _concepts:
 
-Architecture, Methodology, and Components
-========
+Архітектура, методологія та компоненти
+======================================
 
-Understanding the architecture of OpenSTEF will help you gain insight on how to use this software package
-and better understand the rest of the documentation.
+Розуміння архітектури OpenSTEF допоможе вам отримати уявлення про те, як використовувати цей програмний пакет
+та краще зрозуміти решту документації.
 
-Software architecture
----------------------
-OpenSTEF is set up as a Python package that performs machine learning in order to forecast energy loads on the energy grid.
+Архітектура програмного забезпечення
+------------------------------------
+OpenSTEF створений як пакет Python, який виконує машинне навчання з метою прогнозування енергетичних навантажень на енергосистему.
 
 .. image:: software_arch.png
    :width: 830
 
-OpenSTEF contains:
+OpenSTEF складається з:
 
-* **Prediction job**: input configuration for a task and/or pipeline
-  (e.g. train an XGB model for a certain location).
-* **Tasks**: can be called to perform training, forecasting, or evaluation.
-  All tasks use corresponding pipelines. Tasks include getting data from a database,
-  raising task exceptions, and writing data to a database.
-* **Pipelines**: can be called to perform training, forecasting or evaluation by
-  giving input data to the pipeline. Users can choose to use tasks
-  (which fetch/write data for you), or use pipelines directly
-  (which requires fetching/writing data yourself).
-* **Data validation**: is called by pipelines to validate data (e.g. checking for flatliners).
-* **Feature engineering**: is called by pipelines to select required features for training/forecasting based on the configuration from the prediction job (e.g. create new features for energy load of yesterday, last week).
-* **Machine learning**: is called by pipelines to perform training, forecasting, or evaluation based on the configuration from the prediction job (e.g. train an XGB quantile model).
-* **Model storage**: is called by pipelines to store or fetch trained machine learning model with MLFlow (e.g. store model locally in disk/database/s3_bucket on AWS).
-* **Post processing**: is called by pipelines to post process forecasting (e.g. combine forecast dataframe with extra configuration information from prediction job or split load forecast into solar, wind, and energy usage forecast).
-* **Post processing**: is called by pipelines to post process forecasting (e.g. combine forecast dataframe with extra configuration information from prediction job or split load forecast into solar, wind, and energy usage forecast).
+* **Prediction job** (Передбачення): вхідну конфігурацію для завдання та/або трубопроводу
+  (наприклад, натренувати модель XGB для певної локації).
+* **Tasks** (Завдання): можна викликати для навчання, прогнозування або оцінювання.
+  Всі завдання використовують відповідні трубопроводи. Завдання включають отримання даних з бази даних,
+  виклик винятків завдання та запис даних до бази даних.
+* **Pipelines** (Трубопроводи): можна викликати для навчання, прогнозування або оцінювання шляхом
+  надаючи вхідні дані до трубопроводу. Користувачі можуть використовувати завдання
+  (які отримують/записують дані за вас), або використовувати безпосередньо трубопроводи
+  (що вимагає самостійного отримання/запису даних).
+* ** **Data validation** (Підтвердження даних): викликається трубопроводами для перевірки даних (наприклад, для перевірки наявності рівнинних ділянок).
+* **Feature engineering** (Розробка функцій): викликається трубопроводами для вибору необхідних об'єктів для навчання/прогнозування на основі конфігурації із завдання прогнозування (наприклад, створення нових об'єктів для енергетичного навантаження за вчорашній день, минулий тиждень).
+* **Machine learning** (Машинне навчання): викликається трубопроводами для виконання навчання, прогнозування або оцінювання на основі конфігурації із завдання прогнозування (наприклад, навчання квантильної моделі XGB).
+* **Model storage** (Зберігання моделей): викликається трубопроводами для зберігання або отримання навченої моделі машинного навчання за допомогою MLFlow (наприклад, зберігати модель локально в disk/database/s3_bucket на AWS).
+* **Post processing** (Подальша обробка): викликається трубопроводами для постпрогнозування (наприклад, об'єднання прогнозного фрейму даних з додатковою інформацією про конфігурацію із завдання прогнозування або розділення прогнозу навантаження на прогноз сонячної, вітрової енергії та прогноз використання енергії).
 
 
-Tasks are provided in a separate Python package called `openstef-dbc <https://pypi.org/project/openstef-dbc/>`_. If you need to use tasks, the openstef-dbc package is required in order to interface to databases for reading/writing.
-Currently, openstef-dbc supports interfaces for a MySQL database for configuration data (e.g. information for prediction jobs) and `InfluxDB <https://www.influxdata.com/>`_ for feature data (e.g. weather, load, energy price data) and energy forecast data.
+Завдання надаються в окремому пакеті Python під назвою `openstef-dbc <https://pypi.org/project/openstef-dbc/>`_. Якщо вам потрібно використовувати завдання, потрібен пакет openstef-dbc для інтерфейсу з базами даних для читання/запису.
+Наразі openstef-dbc підтримує інтерфейси для бази даних MySQL для даних конфігурації (наприклад, інформація для завдань прогнозування) і `InfluxDB <https://www.influxdata.com/>`_ для функціональних даних (наприклад, даних про погоду, навантаження, ціни на енергоносії) та даних прогнозу енергоспоживання.
 
 |
 
@@ -47,32 +46,32 @@ Currently, openstef-dbc supports interfaces for a MySQL database for configurati
 
 .. _application-architecture:
 
-Application architecture
-------------------------
+Архітектура Додатку
+-------------------
 
-OpenSTEF is simply a software package (i.e. a Python library). If you're looking to run it as a full application with a graphical user interface frontend, you must deploy it with additional components.
+OpenSTEF - це просто програмний пакет (тобто бібліотека Python). Якщо ви хочете запустити його як повноцінний додаток з графічним інтерфейсом користувача, ви повинні розгорнути його з додатковими компонентами.
 
 .. image:: https://user-images.githubusercontent.com/25053215/184536367-c7914697-7a2a-45b8-b447-36aec1a6c1af.png
   :width: 800
 
-Here are the recommended additional components if you want to run it as an application:
+Ось рекомендовані додаткові компоненти, якщо ви хочете запустити його як додаток:
 
-* Github repositories:
+* Зупозиторії на Github:
 
-  * (create yourself) **Data fetcher**: software package to fetch input data and write it to a database (e.g. a scheduled `CronJob <https://kubernetes.io/docs/concepts/workloads/controllers/cron-jobs/>`_ to fetch weather data in Kubernetes).
-  * (create yourself) **Data API**: API to provide data from a database or other source to applications and users (e.g. a REST API).
-  * (create yourself) **Forecaster**: software package to fetch config/data and run OpenSTEF tasks/pipelines (e.g. a scheduled cron job to train/forecast in Kubernetes).
-  * (open source) **OpenSTEF**: software package that performs machine learning to forecast energy loads on the energy grid.
-  * (open source) **OpenSTEF-dbc**: software package that provides interface to read/write data from/to a database for openstef tasks.
+  * (створить самі) **Data fetcher**: програмний пакет для отримання вхідних даних і запису їх до бази даних (напр. запланований `CronJob <https://kubernetes.io/docs/concepts/workloads/controllers/cron-jobs/>`_ для отримання даних про погоду в Kubernetes).
+  * (створить самі) **Data API**: API для надання даних з бази даних або іншого джерела додаткам і користувачам (наприклад, REST API).
+  * (створить самі) **Forecaster**: програмний пакет для отримання конфігурації/даних та запуску завдань/трубопроводів OpenSTEF (наприклад, заплановане завдання cron для навчання/прогнозування в Kubernetes).
+  * (відкрите джерело) **OpenSTEF**: програмний пакет, який здійснює машинне навчання для прогнозування енергетичних навантажень на енергосистему.
+  * (відкрите джерело) **OpenSTEF-dbc**: програмний пакет, який надає інтерфейс для читання/запису даних з/до бази даних для задач openstef.
 
 * CI/CD Infrastructure
 
-  * (create yourself) **Energy forecasting Application CI/CD**: Continuous Integration/Continuous Delivery pipeline to build, test, and deploy your forecasting application (e.g. to Kubernetes via Jenkins, Chef, Puppet, Tekton, etc.).
-  * (open source) **OpenSTEF package CI/CD**: A set of GitHub Actions that build, test, and publish the OpenSTEF package to PyPI `here <https://pypi.org/project/openstef/>`_ when it is time to release a new version.
+  * (створить самі) **Energy forecasting Application CI/CD**: Трубопровід безперервної інтеграції/безперервної доставки для побудови, тестування та розгортання вашого додатку для прогнозування (наприклад, до Kubernetes через Jenkins, Chef, Puppet, Tekton тощо).
+  * (відкрите джерело) **OpenSTEF package CI/CD**: Набір дій GitHub, які збирають, тестують та публікують пакет OpenSTEF до PyPI `here <https://pypi.org/project/openstef/>`_ коли настане час випустити нову версію.
 
-* **Compute**: compute resources to run your pipelines and tasks in production (e.g. on Kubernetes using any of the various providers AWS, Azure, GCP, Linode, etc.).
-* **Database**: SQL, InfluxDB, or other database that stores fetched input data and forecasts.
-* **Dashboard**: graphical user interface dashboard that allows uers to visualize application data (e.g. historic and forecasted energy loads)
+* **Compute**: обчислювальні ресурси для запуску ваших трубопроводів і завдань у виробництві (наприклад, на Kubernetes з використанням будь-якого з різних провайдерів AWS, Azure, GCP, Linode і т.д.).
+* **Database**: SQL, InfluxDB або інша база даних, яка зберігає отримані вхідні дані та прогнози.
+* **Dashboard**: графічний інтерфейс користувача, що дозволяє користувачам візуалізувати дані програми (наприклад, історичні та прогнозовані енергетичні навантаження).
 
 .. include:: dashboard.rst
 

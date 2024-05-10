@@ -4,31 +4,31 @@
 
 .. _pipeline_user_guide:
 
-Pipelines user guide
-====================
+Посібник користувача з трубопроводів
+====================================
 
-As mentioned in the :ref:`concepts <concepts>` section, tasks are an extension of pipelines, that include getting data from a database,
-raising task exceptions, and writing data to a database. In an operational setting, both tasks and pipelines can be used.
-The main difference is that an operational application that leverages OpenSTEF's tasks fuctionality is easier to implement,
-whereas the pipeline functionality offers more flexibility in terms of design and implementation in addition to offering more scalability.
+Як згадувалося у розділі :ref:`concepts <поняття>`, завдання є розширенням трубопроводів, які включають отримання даних з бази даних,
+виклик винятків завдань і запис даних до бази даних. В операційному середовищі можна використовувати як завдання, так і трубопроводи.
+Основна відмінність полягає в тому, що операційний додаток, який використовує функціональність завдань OpenSTEF, легше реалізувати,
+в той час як функціональність трубопроводу пропонує більшу гнучкість з точки зору проектування та реалізації, а також більшу масштабованість.
 
-To illustrate the task as well as the pipeline :ref:`concept <concepts>`, code snippets for both implementations are presented below.
-These code snippets show two different ways in which OpenSTEF's pipeline functionality can be integrated within an application that runs in an operational setting.
+Щоб проілюструвати завдання, а також трубопровід :ref:`concept <concepts>`, нижче наведено фрагменти коду для обох реалізацій.
+Ці фрагменти коду показують два різні способи, якими функціональність трубопроводу OpenSTEF може бути інтегрована у додаток, що працює у робочому середовищі.
 
-Task implementation
+Реалізація завдань
 -------------------
 
-Let's first have a look at the task implementation, which is also the way it is done in the `GitHub repository containing the reference implementation <https://github.com/OpenSTEF/openstef-reference>`_.
-In the case that model training, hyperparameter tuning, or forecasting is supposed to be ran according to a certain schedule, using CronJobs for example,
-the task implementation is easy to set up.
-However this implementation's scalability is limited. Additionally, this implementation relies on the `the OpenSTEF database connector <https://pypi.org/project/openstef-dbc/>`_, ``openstef-dbc``,
-meaning that the databases have to be set up according to the `reference implementation <https://github.com/OpenSTEF/openstef-reference>`_.
-Below, code snippets are shown for different types of tasks that demonstrate the use of OpenSTEF's task functionality.
+Спочатку розглянемо реалізацію задачі, як це зроблено у `GitHub репозиторії, що містить референсну реалізацію <https://github.com/OpenSTEF/openstef-reference>`_.
+У випадку, якщо навчання моделі, налаштування гіперпараметрів або прогнозування передбачається запускати за певним розкладом, наприклад, за допомогою CronJobs,
+реалізація завдання легко налаштовується.
+Однак масштабованість цієї реалізації обмежена. Крім того, ця реалізація покладається на `з'єднувач баз даних OpenSTEF <https://pypi.org/project/openstef-dbc/>`_, ``openstef-dbc``,
+що означає, що бази даних мають бути налаштовані відповідно до `референсної реалізації <https://github.com/OpenSTEF/openstef-reference>`_.
+Нижче наведено фрагменти коду для різних типів задач, які демонструють використання функціональності задач OpenSTEF.
 
-Note that, apart from the imports, the implementation is the same for each type of task. The `config` object is a `pydantic.BaseSettings` object holding all relevanyt configuration such as usernames, secrets and hosts etc.
+Зауважте, що за винятком імпорту, реалізація є однаковою для кожного типу задач. Об'єкт `config` є об'єктом `pydantic.BaseSettings`, що містить всі необхідні конфігурації, такі як імена користувачів, секрети, хости тощо.
 
-Train model task implementation
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Виконання задачі моделі тренування
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ::
 
     import sys
@@ -50,8 +50,8 @@ Train model task implementation
         main()
 
 
-Create forecast task implementation
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Створення виконання прогнозного завдання
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ::
 
     import sys
@@ -73,8 +73,8 @@ Create forecast task implementation
         main()
 
 
-Optimize hyperparameters task implementation
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Оптимізація реалізації завдань з гіперпараметрами
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ::
 
     from pathlib import Path
@@ -95,8 +95,8 @@ Optimize hyperparameters task implementation
         main()
 
 
-Create components forecast task implementation
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Створення компонентів для прогнозування виконання завдань
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ::
 
     from pathlib import Path
@@ -117,8 +117,8 @@ Create components forecast task implementation
         main()
 
 
-Create base case forecast task implementation
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Створення базового сценарію реалізації завдання прогнозування
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ::
 
     from pathlib import Path
@@ -139,17 +139,17 @@ Create base case forecast task implementation
         main()
 
 
-Pipeline implementation
+Реалізація трубопроводу
 -----------------------
 
-The pipeline implementation does not rely on `the OpenSTEF database connector <https://pypi.org/project/openstef-dbc/>`_, ``openstef-dbc``.
-Therefore, pipelines can be used together with any kind of database setup, unlike tasks,
-which require databases to be implemented according to the `reference implementation <https://github.com/OpenSTEF/openstef-reference>`_.
+Реалізація трубопроводу не покладається на `the OpenSTEF database connector <https://pypi.org/project/openstef-dbc/>`_, ``openstef-dbc``.
+Тому трубопроводи можна використовувати разом з будь-яким типом налаштування бази даних, на відміну від завдань,
+які вимагають, щоб бази даних були реалізовані відповідно до `reference implementation <https://github.com/OpenSTEF/openstef-reference>`_.
 
-A more scalable and arguably more neat set up than the `reference implementation <https://github.com/OpenSTEF/openstef-reference>`_,
-is to expose the OpenSTEF pipeline functionality through an API,
-for instance by using the `FastAPI framework <https://fastapi.tiangolo.com/>`_.
-The code snippet below shows how OpenSTEF pipelines can be integrated into an API using the
+Більш масштабоване і, можливо, більш акуратне налаштування, ніж `реалізація за посиланням <https://github.com/OpenSTEF/openstef-reference>`_,
+є надання функціональності трубопроводу OpenSTEF за допомогою API,
+наприклад, за допомогою фреймворку `FastAPI <https://fastapi.tiangolo.com/>`_.
+Наведений нижче фрагмент коду показує, як трубопроводи OpenSTEF можуть бути інтегровані у API за допомогою
 `repository pattern <https://mpuig.github.io/Notes/fastapi_basics/02.repository_pattern/>`_::
 
     from typing import Any, List, Tuple
