@@ -45,7 +45,7 @@ OpenSTEF розроблено на основі трубопроводів (ди
 `GitHub repository contains a reference implementation <https://github.com/OpenSTEF/openstef-reference>`_  ви можете використовувати як відправну точку.
 Цей приклад реалізації включає бази даних, користувацький інтерфейс та приклади даних.
 
-Більше інформації про те, як може виглядати архітектура такого додатку, можна знайти :ref:`here <application-architecture>`.
+Більше інформації про те, як може виглядати архітектура такого додатку, можна знайти :ref:`тут <application-architecture>`.
 
 .. include:: dashboard.rst
 Скріншот операційної панелі, що показує ключові функціональні можливості OpenSTEF. Документацію до інформаційної панелі можна знайти `тут <https://raw.githack.com/OpenSTEF/.github/main/profile/html/openstef_dashboard_doc.html>`_.
