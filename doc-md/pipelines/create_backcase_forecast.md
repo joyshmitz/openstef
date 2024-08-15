@@ -6,8 +6,8 @@
 
 **Parameters**:
 
-- **pj** (`PredictionJobDataClass`) – Prediction job
-- **input_data** (`DataFrame`) – data frame containing the input data necessary for the prediction.
+- **pj** (`PredictionJobDataClass`) – Робота прогнозування
+- **input_data** (`DataFrame`) – фрейм даних, що містить вхідні дані, необхідні для прогнозування.
 
 **Return type**:
 
