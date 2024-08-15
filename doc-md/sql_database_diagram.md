@@ -105,7 +105,7 @@ style="width:6.3in;height:4.24236in" alt="image" />
 В openstef/feature_engineering/weather_features.py потужність, що
 виробляється вітрової турбіни обчислюється як
 
-$$P(v) = \\{P\_{rated}}/{1 + e^{- k(v - c)}},$$
+P(v) = *P*<sub>*r**a**t**e**d*</sub>/{1 + e^{- k(v - c)}},
 
 де *v* швидкість вітру на висоті хаба, *P*<sub>*r**a**t**e**d*</sub> =
 rated_power, *k* = steepness і *c* = slope_center.

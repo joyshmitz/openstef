@@ -12,15 +12,15 @@ OpenSTEF - це пакет Python, який використовується д�
 
 <div class="toctree" maxdepth="1">
 
-[about_openstef](https://github.com/AlexBotsmann/openstef/blob/dev/ostef-doc-ua/doc-md/about_openstef.md)
+[about_openstef](https://github.com/joyshmitz/openstef/blob/dev/ostef-doc-ua/doc-md/about_openstef.md)
 
-[user_guides](https://github.com/AlexBotsmann/openstef/blob/dev/ostef-doc-ua/doc-md/user_guides.md)
+[user_guides](https://github.com/joyshmitz/openstef/blob/dev/ostef-doc-ua/doc-md/user_guides.md)
 
-[architecture_methodology_components](https://github.com/AlexBotsmann/openstef/blob/dev/ostef-doc-ua/doc-md/architecture_methodology_components.md)
+[architecture_methodology_components](https://github.com/joyshmitz/openstef/blob/dev/ostef-doc-ua/doc-md/architecture_methodology_components.md)
 
-[api_reference](https://github.com/AlexBotsmann/openstef/blob/dev/ostef-doc-ua/doc-md/api_reference.md)
+[api_reference](https://github.com/joyshmitz/openstef/blob/dev/ostef-doc-ua/doc-md/api_reference.md)
 
-[community](https://github.com/AlexBotsmann/openstef/blob/dev/ostef-doc-ua/doc-md/community.md)
+[community](https://github.com/joyshmitz/openstef/blob/dev/ostef-doc-ua/doc-md/community.md)
 
 </div>
 

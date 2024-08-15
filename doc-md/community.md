@@ -27,7 +27,7 @@
 
 ## Дорожня карта
 
-Актуальний огляд дорожньої карти openSTEF можна знайти тут
+Актуальний огляд дорожньої карти openSTEF можна знайти
 [тут](https://wiki.lfenergy.org/display/OS/OpenSTEF+Roadmap).
 
 ## Внесок

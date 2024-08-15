@@ -11,12 +11,12 @@ OpenSTEF розроблено на основі трубопроводів (ди
 
 Доступні наступні трубопроводи:
 
--  [`openstef.pipeline.train_model`]()
--  [`openstef.pipeline.create_forecast`]()
--  [`openstef.pipeline.optimize_hyperparameters`]()
--  [`openstef.pipeline.create_component_forecast`]()
--  [`openstef.pipeline.create_basecase_forecast`]()
--  [`openstef.pipeline.train_create_forecast_backtest`]()
+-  [`openstef.pipeline.train_model`](https://github.com/joyshmitz/openstef/blob/dev/ostef-doc-ua/doc-md/pipelines/train_model.md)
+-  [`openstef.pipeline.create_forecast`](https://github.com/joyshmitz/openstef/blob/dev/ostef-doc-ua/doc-md/pipelines/create_forecast.md)
+-  [`openstef.pipeline.optimize_hyperparameters`](https://github.com/joyshmitz/openstef/blob/dev/ostef-doc-ua/doc-md/pipelines/optimize_hyperparameters.md)
+-  [`openstef.pipeline.create_component_forecast`](https://github.com/joyshmitz/openstef/blob/dev/ostef-doc-ua/doc-md/pipelines/create_component_forecast.md)
+-  [`openstef.pipeline.create_basecase_forecast`](https://github.com/joyshmitz/openstef/blob/dev/ostef-doc-ua/doc-md/pipelines/create_backcase_forecast.md)
+-  [`openstef.pipeline.train_create_forecast_backtest`](https://github.com/joyshmitz/openstef/blob/dev/ostef-doc-ua/doc-md/pipelines/train_model.md)
 
 Чудовий спосіб розпочати роботу та ознайомитися з трубопроводами
 OpenSTEF - це поглянути на [це репозиторій GitHub, який містить
