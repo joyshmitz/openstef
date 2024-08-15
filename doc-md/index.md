@@ -12,15 +12,15 @@ OpenSTEF - це пакет Python, який використовується д�
 
 <div class="toctree" maxdepth="1">
 
-[about_openstef]()
+[about_openstef](https://github.com/AlexBotsmann/openstef/blob/dev/ostef-doc-ua/doc-md/about_openstef.md)
 
-[user_guides]()
+[user_guides](https://github.com/AlexBotsmann/openstef/blob/dev/ostef-doc-ua/doc-md/user_guides.md)
 
-[architecture_methodology_components]()
+[architecture_methodology_components](https://github.com/AlexBotsmann/openstef/blob/dev/ostef-doc-ua/doc-md/architecture_methodology_components.md)
 
-[api_reference]()
+[api_reference](https://github.com/AlexBotsmann/openstef/blob/dev/ostef-doc-ua/doc-md/api_reference.md)
 
-[community]()
+[community](https://github.com/AlexBotsmann/openstef/blob/dev/ostef-doc-ua/doc-md/community.md)
 
 </div>
 

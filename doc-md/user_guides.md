@@ -11,12 +11,12 @@ OpenSTEF розроблено на основі трубопроводів (ди
 
 Доступні наступні трубопроводи:
 
--   `openstef.pipeline.train_model`
--   `openstef.pipeline.create_forecast`
--   `openstef.pipeline.optimize_hyperparameters`
--   `openstef.pipeline.create_component_forecast`
--   `openstef.pipeline.create_basecase_forecast`
--   `openstef.pipeline.train_create_forecast_backtest`
+-  [`openstef.pipeline.train_model`]()
+-  [`openstef.pipeline.create_forecast`]()
+-  [`openstef.pipeline.optimize_hyperparameters`]()
+-  [`openstef.pipeline.create_component_forecast`]()
+-  [`openstef.pipeline.create_basecase_forecast`]()
+-  [`openstef.pipeline.train_create_forecast_backtest`]()
 
 Чудовий спосіб розпочати роботу та ознайомитися з трубопроводами
 OpenSTEF - це поглянути на [це репозиторій GitHub, який містить
