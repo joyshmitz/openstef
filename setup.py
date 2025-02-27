@@ -18,6 +18,10 @@ def read_requirements_from_file():
                 line = line[: line.index("#")].strip()
             if len(line) == 0:
                 continue
+            if "xgboost" in line:
+                line = (
+                    line + '; extra == "gpu"'
+                )  # make sure xgboost is installed with GPU support when not specifying options
             requirements.append(line)
         return requirements
 
@@ -29,7 +33,7 @@ def read_long_description_from_readme():
 
 setup(
     name="openstef",
-    version="3.4.52",
+    version="3.4.63",
     packages=find_packages(include=["openstef", "openstef.*"]),
     description="Open short term energy forecaster",
     long_description=read_long_description_from_readme(),
@@ -55,4 +59,10 @@ setup(
         r"License :: OSI Approved :: Mozilla Public License 2.0 (MPL 2.0)",
         "Programming Language :: Python :: 3.11",
     ],
+    extras_require={
+        "cpu": [
+            "xgboost-cpu~=2.0"
+        ],  # Add xgboost-cpu to avoid install large xgboost package when not using GPU
+        "gpu": ["xgboost"],  # Needed to install xgboost with GPU support in normal case
+    },
 )

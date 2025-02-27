@@ -6,7 +6,7 @@
 This code assumes trained models are available from the persistent storage.
 If these are not available run model_train.py to train all models.
 To provide the prognoses the following steps are carried out:
-  1. Get historic training data (TDCV, Load, Weather and APX price data)
+  1. Get historic training data (TDCV, Load, Weather and day_ahead_electricity_price price data)
   2. Apply features
   3. Load model
   4. Make component prediction
@@ -22,7 +22,7 @@ Example:
 
 """
 import logging
-from datetime import datetime, timedelta, timezone
+from datetime import datetime, timedelta, UTC
 from pathlib import Path
 
 import pandas as pd
@@ -76,8 +76,8 @@ def create_components_forecast_task(
         return
 
     # Define datetime range for input data
-    datetime_start = datetime.utcnow() - timedelta(days=t_behind_days)
-    datetime_end = datetime.utcnow() + timedelta(days=t_ahead_days)
+    datetime_start = datetime.now(tz=UTC) - timedelta(days=t_behind_days)
+    datetime_end = datetime.now(tz=UTC) + timedelta(days=t_ahead_days)
 
     logger.info(
         "Get predicted load", datetime_start=datetime_start, datetime_end=datetime_end
@@ -120,9 +120,7 @@ def create_components_forecast_task(
     logger.debug("Written forecast to database")
 
     # Check if forecast was complete enough, otherwise raise exception
-    if forecasts.index.max() < datetime.utcnow().replace(
-        tzinfo=timezone.utc
-    ) + timedelta(hours=30):
+    if forecasts.index.max() < datetime.now(tz=UTC) + timedelta(hours=30):
         # Check which input data is missing the most.
         # Do this by counting the NANs for (load)forecast, radiation and windspeed
         max_index = forecasts.index.max()

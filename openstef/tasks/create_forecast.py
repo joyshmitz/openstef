@@ -6,7 +6,7 @@
 This code assumes trained models are available from the persistent storage. If these
 are not available run model_train.py to train all models.
 To provide the prognoses the folowing steps are carried out:
-  1. Get historic training data (TDCV, Load, Weather and APX price data)
+  1. Get historic training data (TDCV, Load, Weather and day_ahead_electricity_price price data)
   2. Apply features
   3. Load model
   4. Make prediction
@@ -20,11 +20,11 @@ Example:
         $ python create_forecast.py
 
 """
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, UTC
 from pathlib import Path
 
 from openstef.data_classes.prediction_job import PredictionJobDataClass
-from openstef.enums import ModelType, PipelineType
+from openstef.enums import BiddingZone, ModelType, PipelineType
 from openstef.exceptions import InputDataOngoingZeroFlatlinerError
 from openstef.pipeline.create_forecast import create_forecast_pipeline
 from openstef.tasks.utils.predictionjobloop import PredictionJobLoop
@@ -73,8 +73,8 @@ def create_forecast_task(
     mlflow_tracking_uri = context.config.paths_mlflow_tracking_uri
 
     # Define datetime range for input data
-    datetime_start = datetime.utcnow() - timedelta(days=t_behind_days)
-    datetime_end = datetime.utcnow() + timedelta(seconds=pj.horizon_minutes * 60)
+    datetime_start = datetime.now(tz=UTC) - timedelta(days=t_behind_days)
+    datetime_end = datetime.now(tz=UTC) + timedelta(seconds=pj.horizon_minutes * 60)
 
     # Retrieve input data
     input_data = context.database.get_model_input(
@@ -82,7 +82,12 @@ def create_forecast_task(
         location=[pj["lat"], pj["lon"]],
         datetime_start=datetime_start,
         datetime_end=datetime_end,
+        market_price=pj.electricity_bidding_zone.value,
     )
+
+    # Add APX price to the input data for backward compatibility,remove this line when all models are retrained
+    if pj.electricity_bidding_zone == BiddingZone.NL:
+        input_data["APX"] = input_data["day_ahead_electricity_price"]
 
     try:
         # Make forecast with the forecast pipeline
