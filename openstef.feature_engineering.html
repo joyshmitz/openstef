@@ -38,7 +38,7 @@
     <link rel="icon" href="_static/openstef.ico"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="openstef.metrics package" href="openstef.metrics.html" />
+    <link rel="next" title="openstef.logging package" href="openstef.logging.html" />
     <link rel="prev" title="openstef.data_classes package" href="openstef.data_classes.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="docsearch:language" content="en">
@@ -355,6 +355,7 @@
     <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="openstef.data_classes.html">openstef.data_classes package</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">openstef.feature_engineering package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="openstef.logging.html">openstef.logging package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="openstef.metrics.html">openstef.metrics package</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="openstef.model.html">openstef.model package</a><input checked class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="openstef.model.metamodels.html">openstef.model.metamodels package</a></li>
@@ -364,6 +365,7 @@
 <li class="toctree-l1"><a class="reference internal" href="openstef.model_selection.html">openstef.model_selection package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="openstef.monitoring.html">openstef.monitoring package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="openstef.pipeline.html">openstef.pipeline package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="openstef.plotting.html">openstef.plotting package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="openstef.postprocessing.html">openstef.postprocessing package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="openstef.preprocessing.html">openstef.preprocessing package</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="openstef.tasks.html">openstef.tasks package</a><input checked class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -882,7 +884,7 @@ horzions data is invalidated as when they are not available.</p>
 if not specified a default location is used</p></li>
 <li><p><strong>latency_config</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code>) – (Optional) Invalidate certain features that are not
 available for a specific horizon due to data latency. Defaults to
-<code class="docutils literal notranslate"><span class="pre">{&quot;APX&quot;:</span> <span class="pre">24}</span></code>.</p></li>
+<code class="docutils literal notranslate"><span class="pre">{&quot;day_ahead_electricity_price&quot;:</span> <span class="pre">24}</span></code>.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
@@ -1209,6 +1211,50 @@ columns = [label, predictor_1,…, predictor_n])</p></li>
 </dd></dl>
 
 </section>
+<section id="module-openstef.feature_engineering.rolling_features">
+<span id="openstef-feature-engineering-rolling-features-module"></span><h2>openstef.feature_engineering.rolling_features module<a class="headerlink" href="#module-openstef.feature_engineering.rolling_features" title="Link to this heading">¶</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="openstef.feature_engineering.rolling_features.add_rolling_aggregate_features">
+<span class="sig-prename descclassname"><span class="pre">openstef.feature_engineering.rolling_features.</span></span><span class="sig-name descname"><span class="pre">add_rolling_aggregate_features</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pj</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rolling_window</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">datetime.timedelta(days=1)</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#openstef.feature_engineering.rolling_features.add_rolling_aggregate_features" title="Link to this definition">¶</a></dt>
+<dd><p>Adds rolling aggregate features to the input dataframe.</p>
+<p>These features are calculated with an aggregation over a rolling window of the data.
+A list of requested features is used to determine whether to add the rolling features
+or not.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">DataFrame</span></code>) – Input dataframe to which the rolling features will be added.</p></li>
+<li><p><strong>pj</strong> (<a class="reference internal" href="openstef.data_classes.html#openstef.data_classes.prediction_job.PredictionJobDataClass" title="openstef.data_classes.prediction_job.PredictionJobDataClass"><code class="xref py py-class docutils literal notranslate"><span class="pre">PredictionJobDataClass</span></code></a>) – Prediction job data.</p></li>
+<li><p><strong>rolling_window</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">timedelta</span></code>) – Rolling window size for the aggregation.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">DataFrame</span></code></p>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>DataFrame with added rolling features.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="openstef.feature_engineering.rolling_features.convert_timedelta_to_isoformat">
+<span class="sig-prename descclassname"><span class="pre">openstef.feature_engineering.rolling_features.</span></span><span class="sig-name descname"><span class="pre">convert_timedelta_to_isoformat</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">td</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#openstef.feature_engineering.rolling_features.convert_timedelta_to_isoformat" title="Link to this definition">¶</a></dt>
+<dd><p>Converts a timedelta to an ISO 8601 formatted period string.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>td</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">timedelta</span></code>) – timedelta object to convert.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></p>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>ISO 8601 formatted period string.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
 <section id="module-openstef.feature_engineering.weather_features">
 <span id="openstef-feature-engineering-weather-features-module"></span><h2>openstef.feature_engineering.weather_features module<a class="headerlink" href="#module-openstef.feature_engineering.weather_features" title="Link to this heading">¶</a></h2>
 <p>This module contains all wheather related functions used for feature engineering.</p>
@@ -1494,10 +1540,10 @@ if the input is numeric; a dict with the calculated moisture indices</p>
           <p class="prev-next-title">openstef.data_classes package</p>
       </div>
   </a>
-  <a class='right-next' id="next-link" href="openstef.metrics.html" title="next page">
+  <a class='right-next' id="next-link" href="openstef.logging.html" title="next page">
   <div class="prev-next-info">
       <p class="prev-next-subtitle">next</p>
-      <p class="prev-next-title">openstef.metrics package</p>
+      <p class="prev-next-title">openstef.logging package</p>
   </div>
   <i class="fa-solid fa-angle-right"></i>
   </a>
@@ -2039,6 +2085,31 @@ if the input is numeric; a dict with the calculated moisture indices</p>
       </a>
      </li>
     </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#module-openstef.feature_engineering.rolling_features">
+   openstef.feature_engineering.rolling_features module
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#openstef.feature_engineering.rolling_features.add_rolling_aggregate_features">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       add_rolling_aggregate_features()
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#openstef.feature_engineering.rolling_features.convert_timedelta_to_isoformat">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       convert_timedelta_to_isoformat()
+      </span>
+     </code>
+    </a>
    </li>
   </ul>
  </li>

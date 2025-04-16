@@ -39,7 +39,7 @@
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="openstef.model package" href="openstef.model.html" />
-    <link rel="prev" title="openstef.feature_engineering package" href="openstef.feature_engineering.html" />
+    <link rel="prev" title="openstef.logging package" href="openstef.logging.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="docsearch:language" content="en">
   </head>
@@ -355,6 +355,7 @@
     <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="openstef.data_classes.html">openstef.data_classes package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="openstef.feature_engineering.html">openstef.feature_engineering package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="openstef.logging.html">openstef.logging package</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">openstef.metrics package</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="openstef.model.html">openstef.model package</a><input checked class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="openstef.model.metamodels.html">openstef.model.metamodels package</a></li>
@@ -364,6 +365,7 @@
 <li class="toctree-l1"><a class="reference internal" href="openstef.model_selection.html">openstef.model_selection package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="openstef.monitoring.html">openstef.monitoring package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="openstef.pipeline.html">openstef.pipeline package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="openstef.plotting.html">openstef.plotting package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="openstef.postprocessing.html">openstef.postprocessing package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="openstef.preprocessing.html">openstef.preprocessing package</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="openstef.tasks.html">openstef.tasks package</a><input checked class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -547,7 +549,7 @@ hess: An array containing the second derivative with respect to y_pred.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="openstef.metrics.metrics.franks_skill_score">
-<span class="sig-prename descclassname"><span class="pre">openstef.metrics.metrics.</span></span><span class="sig-name descname"><span class="pre">franks_skill_score</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">realised</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">forecast</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">basecase</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">range_</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#openstef.metrics.metrics.franks_skill_score" title="Link to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">openstef.metrics.metrics.</span></span><span class="sig-name descname"><span class="pre">franks_skill_score</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">realised</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">forecast</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">basecase</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">range_</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#openstef.metrics.metrics.franks_skill_score" title="Link to this definition">¶</a></dt>
 <dd><p>Calculate Franks skill score.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
@@ -741,7 +743,7 @@ is based on the load range of the previous two weeks.</p>
 </ul>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></p>
+<dd class="field-even"><p><code class="xref py py-data docutils literal notranslate"><span class="pre">Tuple</span></code></p>
 </dd>
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>Loss information</p>
@@ -866,11 +868,11 @@ that hyperparameter named <cite>max_delta_step</cite> is small enough to satisfy
             <footer class="bd-footer-article">
                 <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-  <a class='left-prev' id="prev-link" href="openstef.feature_engineering.html" title="previous page">
+  <a class='left-prev' id="prev-link" href="openstef.logging.html" title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
           <p class="prev-next-subtitle">previous</p>
-          <p class="prev-next-title">openstef.feature_engineering package</p>
+          <p class="prev-next-title">openstef.logging package</p>
       </div>
   </a>
   <a class='right-next' id="next-link" href="openstef.model.html" title="next page">

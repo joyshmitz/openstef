@@ -395,8 +395,19 @@
 <li class="toctree-l4"><a class="reference internal" href="openstef.feature_engineering.html#module-openstef.feature_engineering.holiday_features">openstef.feature_engineering.holiday_features module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="openstef.feature_engineering.html#module-openstef.feature_engineering.lag_features">openstef.feature_engineering.lag_features module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="openstef.feature_engineering.html#module-openstef.feature_engineering.missing_values_transformer">openstef.feature_engineering.missing_values_transformer module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="openstef.feature_engineering.html#module-openstef.feature_engineering.rolling_features">openstef.feature_engineering.rolling_features module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="openstef.feature_engineering.html#module-openstef.feature_engineering.weather_features">openstef.feature_engineering.weather_features module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="openstef.feature_engineering.html#module-openstef.feature_engineering">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="openstef.logging.html">openstef.logging package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="openstef.logging.html#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="openstef.logging.html#module-openstef.logging.base_logger">openstef.logging.base_logger module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="openstef.logging.html#module-openstef.logging.logger_factory">openstef.logging.logger_factory module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="openstef.logging.html#module-openstef.logging.logger_types">openstef.logging.logger_types module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="openstef.logging.html#module-openstef.logging.standard_logger">openstef.logging.standard_logger module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="openstef.logging.html#module-openstef.logging.structlog_logger">openstef.logging.structlog_logger module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="openstef.logging.html#module-openstef.logging">Module contents</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="openstef.metrics.html">openstef.metrics package</a><ul>
@@ -446,6 +457,12 @@
 <li class="toctree-l4"><a class="reference internal" href="openstef.pipeline.html#module-openstef.pipeline">Module contents</a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="openstef.plotting.html">openstef.plotting package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="openstef.plotting.html#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="openstef.plotting.html#module-openstef.plotting.load_forecast_plotter">openstef.plotting.load_forecast_plotter module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="openstef.plotting.html#module-openstef.plotting">Module contents</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="openstef.postprocessing.html">openstef.postprocessing package</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="openstef.postprocessing.html#submodules">Submodules</a></li>
 <li class="toctree-l4"><a class="reference internal" href="openstef.postprocessing.html#module-openstef.postprocessing.postprocessing">openstef.postprocessing.postprocessing module</a></li>
@@ -485,6 +502,7 @@
 <li class="toctree-l2"><a class="reference internal" href="openstef.html#module-openstef.app_settings">openstef.app_settings module</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="openstef.html#openstef.app_settings.AppSettings"><code class="docutils literal notranslate"><span class="pre">AppSettings</span></code></a><ul>
 <li class="toctree-l4"><a class="reference internal" href="openstef.html#openstef.app_settings.AppSettings.log_level"><code class="docutils literal notranslate"><span class="pre">AppSettings.log_level</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="openstef.html#openstef.app_settings.AppSettings.logger_type"><code class="docutils literal notranslate"><span class="pre">AppSettings.logger_type</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="openstef.html#openstef.app_settings.AppSettings.model_config"><code class="docutils literal notranslate"><span class="pre">AppSettings.model_config</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="openstef.html#openstef.app_settings.AppSettings.post_teams_messages"><code class="docutils literal notranslate"><span class="pre">AppSettings.post_teams_messages</span></code></a></li>
 </ul>
@@ -492,6 +510,13 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="openstef.html#module-openstef.enums">openstef.enums module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="openstef.html#openstef.enums.AggregateFunction"><code class="docutils literal notranslate"><span class="pre">AggregateFunction</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="openstef.html#openstef.enums.AggregateFunction.MAX"><code class="docutils literal notranslate"><span class="pre">AggregateFunction.MAX</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="openstef.html#openstef.enums.AggregateFunction.MEAN"><code class="docutils literal notranslate"><span class="pre">AggregateFunction.MEAN</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="openstef.html#openstef.enums.AggregateFunction.MEDIAN"><code class="docutils literal notranslate"><span class="pre">AggregateFunction.MEDIAN</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="openstef.html#openstef.enums.AggregateFunction.MIN"><code class="docutils literal notranslate"><span class="pre">AggregateFunction.MIN</span></code></a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="openstef.html#openstef.enums.BiddingZone"><code class="docutils literal notranslate"><span class="pre">BiddingZone</span></code></a><ul>
 <li class="toctree-l4"><a class="reference internal" href="openstef.html#openstef.enums.BiddingZone.AL"><code class="docutils literal notranslate"><span class="pre">BiddingZone.AL</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="openstef.html#openstef.enums.BiddingZone.AT"><code class="docutils literal notranslate"><span class="pre">BiddingZone.AT</span></code></a></li>
@@ -606,6 +631,7 @@
 <li class="toctree-l3"><a class="reference internal" href="openstef.html#openstef.enums.ModelType"><code class="docutils literal notranslate"><span class="pre">ModelType</span></code></a><ul>
 <li class="toctree-l4"><a class="reference internal" href="openstef.html#openstef.enums.ModelType.ARIMA"><code class="docutils literal notranslate"><span class="pre">ModelType.ARIMA</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="openstef.html#openstef.enums.ModelType.FLATLINER"><code class="docutils literal notranslate"><span class="pre">ModelType.FLATLINER</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="openstef.html#openstef.enums.ModelType.GBLINEAR_QUANTILE"><code class="docutils literal notranslate"><span class="pre">ModelType.GBLINEAR_QUANTILE</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="openstef.html#openstef.enums.ModelType.LGB"><code class="docutils literal notranslate"><span class="pre">ModelType.LGB</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="openstef.html#openstef.enums.ModelType.LINEAR"><code class="docutils literal notranslate"><span class="pre">ModelType.LINEAR</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="openstef.html#openstef.enums.ModelType.LINEAR_QUANTILE"><code class="docutils literal notranslate"><span class="pre">ModelType.LINEAR_QUANTILE</span></code></a></li>
@@ -626,7 +652,7 @@
 <li class="toctree-l3"><a class="reference internal" href="openstef.html#openstef.exceptions.ComponentForecastTooShortHorizonError"><code class="docutils literal notranslate"><span class="pre">ComponentForecastTooShortHorizonError</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="openstef.html#openstef.exceptions.InputDataInsufficientError"><code class="docutils literal notranslate"><span class="pre">InputDataInsufficientError</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="openstef.html#openstef.exceptions.InputDataInvalidError"><code class="docutils literal notranslate"><span class="pre">InputDataInvalidError</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="openstef.html#openstef.exceptions.InputDataOngoingZeroFlatlinerError"><code class="docutils literal notranslate"><span class="pre">InputDataOngoingZeroFlatlinerError</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="openstef.html#openstef.exceptions.InputDataOngoingFlatlinerError"><code class="docutils literal notranslate"><span class="pre">InputDataOngoingFlatlinerError</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="openstef.html#openstef.exceptions.InputDataWrongColumnOrderError"><code class="docutils literal notranslate"><span class="pre">InputDataWrongColumnOrderError</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="openstef.html#openstef.exceptions.ModelWithoutStDev"><code class="docutils literal notranslate"><span class="pre">ModelWithoutStDev</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="openstef.html#openstef.exceptions.NoPredictedLoadError"><code class="docutils literal notranslate"><span class="pre">NoPredictedLoadError</span></code></a></li>

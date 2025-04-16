@@ -355,6 +355,7 @@
     <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="openstef.data_classes.html">openstef.data_classes package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="openstef.feature_engineering.html">openstef.feature_engineering package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="openstef.logging.html">openstef.logging package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="openstef.metrics.html">openstef.metrics package</a></li>
 <li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">openstef.model package</a><input checked class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="openstef.model.metamodels.html">openstef.model.metamodels package</a></li>
@@ -364,6 +365,7 @@
 <li class="toctree-l1"><a class="reference internal" href="openstef.model_selection.html">openstef.model_selection package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="openstef.monitoring.html">openstef.monitoring package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="openstef.pipeline.html">openstef.pipeline package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="openstef.plotting.html">openstef.plotting package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="openstef.postprocessing.html">openstef.postprocessing package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="openstef.preprocessing.html">openstef.preprocessing package</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="openstef.tasks.html">openstef.tasks package</a><input checked class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -460,10 +462,10 @@
 <li class="toctree-l4"><a class="reference internal" href="openstef.model.regressors.html#openstef.model.regressors.arima.ARIMAOpenstfRegressor.can_predict_quantiles"><code class="docutils literal notranslate"><span class="pre">ARIMAOpenstfRegressor.can_predict_quantiles</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="openstef.model.regressors.html#openstef.model.regressors.arima.ARIMAOpenstfRegressor.feature_names"><code class="docutils literal notranslate"><span class="pre">ARIMAOpenstfRegressor.feature_names</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="openstef.model.regressors.html#openstef.model.regressors.arima.ARIMAOpenstfRegressor.fit"><code class="docutils literal notranslate"><span class="pre">ARIMAOpenstfRegressor.fit()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="openstef.model.regressors.html#openstef.model.regressors.arima.ARIMAOpenstfRegressor.get_feature_importance"><code class="docutils literal notranslate"><span class="pre">ARIMAOpenstfRegressor.get_feature_importance()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="openstef.model.regressors.html#openstef.model.regressors.arima.ARIMAOpenstfRegressor.predict"><code class="docutils literal notranslate"><span class="pre">ARIMAOpenstfRegressor.predict()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="openstef.model.regressors.html#openstef.model.regressors.arima.ARIMAOpenstfRegressor.predict_quantile"><code class="docutils literal notranslate"><span class="pre">ARIMAOpenstfRegressor.predict_quantile()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="openstef.model.regressors.html#openstef.model.regressors.arima.ARIMAOpenstfRegressor.score"><code class="docutils literal notranslate"><span class="pre">ARIMAOpenstfRegressor.score()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="openstef.model.regressors.html#openstef.model.regressors.arima.ARIMAOpenstfRegressor.set_feature_importance"><code class="docutils literal notranslate"><span class="pre">ARIMAOpenstfRegressor.set_feature_importance()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="openstef.model.regressors.html#openstef.model.regressors.arima.ARIMAOpenstfRegressor.set_fit_request"><code class="docutils literal notranslate"><span class="pre">ARIMAOpenstfRegressor.set_fit_request()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="openstef.model.regressors.html#openstef.model.regressors.arima.ARIMAOpenstfRegressor.set_predict_request"><code class="docutils literal notranslate"><span class="pre">ARIMAOpenstfRegressor.set_predict_request()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="openstef.model.regressors.html#openstef.model.regressors.arima.ARIMAOpenstfRegressor.set_score_request"><code class="docutils literal notranslate"><span class="pre">ARIMAOpenstfRegressor.set_score_request()</span></code></a></li>
@@ -507,6 +509,21 @@
 <li class="toctree-l4"><a class="reference internal" href="openstef.model.regressors.html#openstef.model.regressors.flatliner.FlatlinerRegressor.predict"><code class="docutils literal notranslate"><span class="pre">FlatlinerRegressor.predict()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="openstef.model.regressors.html#openstef.model.regressors.flatliner.FlatlinerRegressor.set_fit_request"><code class="docutils literal notranslate"><span class="pre">FlatlinerRegressor.set_fit_request()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="openstef.model.regressors.html#openstef.model.regressors.flatliner.FlatlinerRegressor.set_predict_request"><code class="docutils literal notranslate"><span class="pre">FlatlinerRegressor.set_predict_request()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="openstef.model.regressors.html#module-openstef.model.regressors.gblinear_quantile">openstef.model.regressors.gblinear_quantile module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="openstef.model.regressors.html#openstef.model.regressors.gblinear_quantile.GBLinearQuantileOpenstfRegressor"><code class="docutils literal notranslate"><span class="pre">GBLinearQuantileOpenstfRegressor</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="openstef.model.regressors.html#openstef.model.regressors.gblinear_quantile.GBLinearQuantileOpenstfRegressor.TO_IGNORE_FEATURES"><code class="docutils literal notranslate"><span class="pre">GBLinearQuantileOpenstfRegressor.TO_IGNORE_FEATURES</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="openstef.model.regressors.html#openstef.model.regressors.gblinear_quantile.GBLinearQuantileOpenstfRegressor.TO_KEEP_FEATURES"><code class="docutils literal notranslate"><span class="pre">GBLinearQuantileOpenstfRegressor.TO_KEEP_FEATURES</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="openstef.model.regressors.html#openstef.model.regressors.gblinear_quantile.GBLinearQuantileOpenstfRegressor.can_predict_quantiles"><code class="docutils literal notranslate"><span class="pre">GBLinearQuantileOpenstfRegressor.can_predict_quantiles</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="openstef.model.regressors.html#openstef.model.regressors.gblinear_quantile.GBLinearQuantileOpenstfRegressor.feature_names"><code class="docutils literal notranslate"><span class="pre">GBLinearQuantileOpenstfRegressor.feature_names</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="openstef.model.regressors.html#openstef.model.regressors.gblinear_quantile.GBLinearQuantileOpenstfRegressor.fit"><code class="docutils literal notranslate"><span class="pre">GBLinearQuantileOpenstfRegressor.fit()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="openstef.model.regressors.html#openstef.model.regressors.gblinear_quantile.GBLinearQuantileOpenstfRegressor.is_fitted_"><code class="docutils literal notranslate"><span class="pre">GBLinearQuantileOpenstfRegressor.is_fitted_</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="openstef.model.regressors.html#openstef.model.regressors.gblinear_quantile.GBLinearQuantileOpenstfRegressor.predict"><code class="docutils literal notranslate"><span class="pre">GBLinearQuantileOpenstfRegressor.predict()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="openstef.model.regressors.html#openstef.model.regressors.gblinear_quantile.GBLinearQuantileOpenstfRegressor.set_fit_request"><code class="docutils literal notranslate"><span class="pre">GBLinearQuantileOpenstfRegressor.set_fit_request()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="openstef.model.regressors.html#openstef.model.regressors.gblinear_quantile.GBLinearQuantileOpenstfRegressor.set_predict_request"><code class="docutils literal notranslate"><span class="pre">GBLinearQuantileOpenstfRegressor.set_predict_request()</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -568,9 +585,9 @@
 <li class="toctree-l4"><a class="reference internal" href="openstef.model.regressors.html#openstef.model.regressors.regressor.OpenstfRegressor.can_predict_quantiles"><code class="docutils literal notranslate"><span class="pre">OpenstfRegressor.can_predict_quantiles</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="openstef.model.regressors.html#openstef.model.regressors.regressor.OpenstfRegressor.feature_names"><code class="docutils literal notranslate"><span class="pre">OpenstfRegressor.feature_names</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="openstef.model.regressors.html#openstef.model.regressors.regressor.OpenstfRegressor.fit"><code class="docutils literal notranslate"><span class="pre">OpenstfRegressor.fit()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="openstef.model.regressors.html#openstef.model.regressors.regressor.OpenstfRegressor.get_feature_importance"><code class="docutils literal notranslate"><span class="pre">OpenstfRegressor.get_feature_importance()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="openstef.model.regressors.html#openstef.model.regressors.regressor.OpenstfRegressor.predict"><code class="docutils literal notranslate"><span class="pre">OpenstfRegressor.predict()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="openstef.model.regressors.html#openstef.model.regressors.regressor.OpenstfRegressor.score"><code class="docutils literal notranslate"><span class="pre">OpenstfRegressor.score()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="openstef.model.regressors.html#openstef.model.regressors.regressor.OpenstfRegressor.set_feature_importance"><code class="docutils literal notranslate"><span class="pre">OpenstfRegressor.set_feature_importance()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="openstef.model.regressors.html#openstef.model.regressors.regressor.OpenstfRegressor.set_fit_request"><code class="docutils literal notranslate"><span class="pre">OpenstfRegressor.set_fit_request()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="openstef.model.regressors.html#openstef.model.regressors.regressor.OpenstfRegressor.set_predict_request"><code class="docutils literal notranslate"><span class="pre">OpenstfRegressor.set_predict_request()</span></code></a></li>
 </ul>
@@ -585,6 +602,7 @@
 <li class="toctree-l4"><a class="reference internal" href="openstef.model.regressors.html#openstef.model.regressors.xgb.XGBOpenstfRegressor.gain_importance_name"><code class="docutils literal notranslate"><span class="pre">XGBOpenstfRegressor.gain_importance_name</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="openstef.model.regressors.html#openstef.model.regressors.xgb.XGBOpenstfRegressor.set_fit_request"><code class="docutils literal notranslate"><span class="pre">XGBOpenstfRegressor.set_fit_request()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="openstef.model.regressors.html#openstef.model.regressors.xgb.XGBOpenstfRegressor.set_predict_request"><code class="docutils literal notranslate"><span class="pre">XGBOpenstfRegressor.set_predict_request()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="openstef.model.regressors.html#openstef.model.regressors.xgb.XGBOpenstfRegressor.set_score_request"><code class="docutils literal notranslate"><span class="pre">XGBOpenstfRegressor.set_score_request()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="openstef.model.regressors.html#openstef.model.regressors.xgb.XGBOpenstfRegressor.weight_importance_name"><code class="docutils literal notranslate"><span class="pre">XGBOpenstfRegressor.weight_importance_name</span></code></a></li>
 </ul>
 </li>
@@ -877,7 +895,7 @@ regression or the default method.</p>
 <p>Factory object for creating machine learning models.</p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="openstef.model.model_creator.ModelCreator.MODEL_CONSTRUCTORS">
-<span class="sig-name descname"><span class="pre">MODEL_CONSTRUCTORS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{ModelType.ARIMA:</span> <span class="pre">&lt;class</span> <span class="pre">'openstef.model.regressors.arima.ARIMAOpenstfRegressor'&gt;,</span> <span class="pre">ModelType.FLATLINER:</span> <span class="pre">&lt;class</span> <span class="pre">'openstef.model.regressors.flatliner.FlatlinerRegressor'&gt;,</span> <span class="pre">ModelType.LGB:</span> <span class="pre">&lt;class</span> <span class="pre">'openstef.model.regressors.lgbm.LGBMOpenstfRegressor'&gt;,</span> <span class="pre">ModelType.LINEAR:</span> <span class="pre">&lt;class</span> <span class="pre">'openstef.model.regressors.linear.LinearOpenstfRegressor'&gt;,</span> <span class="pre">ModelType.LINEAR_QUANTILE:</span> <span class="pre">&lt;class</span> <span class="pre">'openstef.model.regressors.linear_quantile.LinearQuantileOpenstfRegressor'&gt;,</span> <span class="pre">ModelType.XGB:</span> <span class="pre">&lt;class</span> <span class="pre">'openstef.model.regressors.xgb.XGBOpenstfRegressor'&gt;,</span> <span class="pre">ModelType.XGB_MULTIOUTPUT_QUANTILE:</span> <span class="pre">&lt;class</span> <span class="pre">'openstef.model.regressors.xgb_multioutput_quantile.XGBMultiOutputQuantileOpenstfRegressor'&gt;,</span> <span class="pre">ModelType.XGB_QUANTILE:</span> <span class="pre">&lt;class</span> <span class="pre">'openstef.model.regressors.xgb_quantile.XGBQuantileOpenstfRegressor'&gt;}</span></em><a class="headerlink" href="#openstef.model.model_creator.ModelCreator.MODEL_CONSTRUCTORS" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">MODEL_CONSTRUCTORS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{ModelType.ARIMA:</span> <span class="pre">&lt;class</span> <span class="pre">'openstef.model.regressors.arima.ARIMAOpenstfRegressor'&gt;,</span> <span class="pre">ModelType.FLATLINER:</span> <span class="pre">&lt;class</span> <span class="pre">'openstef.model.regressors.flatliner.FlatlinerRegressor'&gt;,</span> <span class="pre">ModelType.GBLINEAR_QUANTILE:</span> <span class="pre">&lt;class</span> <span class="pre">'openstef.model.regressors.gblinear_quantile.GBLinearQuantileOpenstfRegressor'&gt;,</span> <span class="pre">ModelType.LGB:</span> <span class="pre">&lt;class</span> <span class="pre">'openstef.model.regressors.lgbm.LGBMOpenstfRegressor'&gt;,</span> <span class="pre">ModelType.LINEAR:</span> <span class="pre">&lt;class</span> <span class="pre">'openstef.model.regressors.linear.LinearOpenstfRegressor'&gt;,</span> <span class="pre">ModelType.LINEAR_QUANTILE:</span> <span class="pre">&lt;class</span> <span class="pre">'openstef.model.regressors.linear_quantile.LinearQuantileOpenstfRegressor'&gt;,</span> <span class="pre">ModelType.XGB:</span> <span class="pre">&lt;class</span> <span class="pre">'openstef.model.regressors.xgb.XGBOpenstfRegressor'&gt;,</span> <span class="pre">ModelType.XGB_MULTIOUTPUT_QUANTILE:</span> <span class="pre">&lt;class</span> <span class="pre">'openstef.model.regressors.xgb_multioutput_quantile.XGBMultiOutputQuantileOpenstfRegressor'&gt;,</span> <span class="pre">ModelType.XGB_QUANTILE:</span> <span class="pre">&lt;class</span> <span class="pre">'openstef.model.regressors.xgb_quantile.XGBQuantileOpenstfRegressor'&gt;}</span></em><a class="headerlink" href="#openstef.model.model_creator.ModelCreator.MODEL_CONSTRUCTORS" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
@@ -935,6 +953,11 @@ it is usually done via statistical analysis and heuristics.</p>
 <dt class="sig sig-object py" id="openstef.model.objective.LGBRegressorObjective">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">openstef.model.objective.</span></span><span class="sig-name descname"><span class="pre">LGBRegressorObjective</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#openstef.model.objective.LGBRegressorObjective" title="Link to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#openstef.model.objective.RegressorObjective" title="openstef.model.objective.RegressorObjective"><code class="xref py py-class docutils literal notranslate"><span class="pre">RegressorObjective</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="openstef.model.objective.LGBRegressorObjective.get_early_stopping_callback">
+<span class="sig-name descname"><span class="pre">get_early_stopping_callback</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#openstef.model.objective.LGBRegressorObjective.get_early_stopping_callback" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
 <dl class="py method">
 <dt class="sig sig-object py" id="openstef.model.objective.LGBRegressorObjective.get_params">
 <span class="sig-name descname"><span class="pre">get_params</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">trial</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#openstef.model.objective.LGBRegressorObjective.get_params" title="Link to this definition">¶</a></dt>
@@ -1020,6 +1043,11 @@ Next the instance will be called by he optuna study during optimization.</p>
 </dd>
 </dl>
 </dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="openstef.model.objective.RegressorObjective.get_early_stopping_callback">
+<span class="sig-name descname"><span class="pre">get_early_stopping_callback</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#openstef.model.objective.RegressorObjective.get_early_stopping_callback" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="openstef.model.objective.RegressorObjective.get_params">
@@ -1124,6 +1152,11 @@ Next the instance will be called by he optuna study during optimization.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="openstef.model.objective.XGBRegressorObjective.get_early_stopping_callback">
+<span class="sig-name descname"><span class="pre">get_early_stopping_callback</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#openstef.model.objective.XGBRegressorObjective.get_early_stopping_callback" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="openstef.model.objective.XGBRegressorObjective.get_params">
 <span class="sig-name descname"><span class="pre">get_params</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">trial</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#openstef.model.objective.XGBRegressorObjective.get_params" title="Link to this definition">¶</a></dt>
 <dd><p>Get parameters for XGB Regressor Objective with objective specific parameters.</p>
@@ -1154,7 +1187,7 @@ Next the instance will be called by he optuna study during optimization.</p>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="openstef.model.objective_creator.ObjectiveCreator.OBJECTIVES">
-<span class="sig-name descname"><span class="pre">OBJECTIVES</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{ModelType.ARIMA:</span> <span class="pre">&lt;class</span> <span class="pre">'openstef.model.objective.ARIMARegressorObjective'&gt;,</span> <span class="pre">ModelType.LGB:</span> <span class="pre">&lt;class</span> <span class="pre">'openstef.model.objective.LGBRegressorObjective'&gt;,</span> <span class="pre">ModelType.LINEAR:</span> <span class="pre">&lt;class</span> <span class="pre">'openstef.model.objective.LinearRegressorObjective'&gt;,</span> <span class="pre">ModelType.LINEAR_QUANTILE:</span> <span class="pre">&lt;class</span> <span class="pre">'openstef.model.objective.LinearRegressorObjective'&gt;,</span> <span class="pre">ModelType.XGB:</span> <span class="pre">&lt;class</span> <span class="pre">'openstef.model.objective.XGBRegressorObjective'&gt;,</span> <span class="pre">ModelType.XGB_MULTIOUTPUT_QUANTILE:</span> <span class="pre">&lt;class</span> <span class="pre">'openstef.model.objective.XGBMultioutputQuantileRegressorObjective'&gt;,</span> <span class="pre">ModelType.XGB_QUANTILE:</span> <span class="pre">&lt;class</span> <span class="pre">'openstef.model.objective.XGBQuantileRegressorObjective'&gt;}</span></em><a class="headerlink" href="#openstef.model.objective_creator.ObjectiveCreator.OBJECTIVES" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">OBJECTIVES</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{ModelType.ARIMA:</span> <span class="pre">&lt;class</span> <span class="pre">'openstef.model.objective.ARIMARegressorObjective'&gt;,</span> <span class="pre">ModelType.GBLINEAR_QUANTILE:</span> <span class="pre">&lt;class</span> <span class="pre">'openstef.model.objective.LinearRegressorObjective'&gt;,</span> <span class="pre">ModelType.LGB:</span> <span class="pre">&lt;class</span> <span class="pre">'openstef.model.objective.LGBRegressorObjective'&gt;,</span> <span class="pre">ModelType.LINEAR:</span> <span class="pre">&lt;class</span> <span class="pre">'openstef.model.objective.LinearRegressorObjective'&gt;,</span> <span class="pre">ModelType.LINEAR_QUANTILE:</span> <span class="pre">&lt;class</span> <span class="pre">'openstef.model.objective.LinearRegressorObjective'&gt;,</span> <span class="pre">ModelType.XGB:</span> <span class="pre">&lt;class</span> <span class="pre">'openstef.model.objective.XGBRegressorObjective'&gt;,</span> <span class="pre">ModelType.XGB_MULTIOUTPUT_QUANTILE:</span> <span class="pre">&lt;class</span> <span class="pre">'openstef.model.objective.XGBMultioutputQuantileRegressorObjective'&gt;,</span> <span class="pre">ModelType.XGB_QUANTILE:</span> <span class="pre">&lt;class</span> <span class="pre">'openstef.model.objective.XGBQuantileRegressorObjective'&gt;}</span></em><a class="headerlink" href="#openstef.model.objective_creator.ObjectiveCreator.OBJECTIVES" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
@@ -1507,6 +1540,15 @@ For each hour of the day the std of the difference is calculated.</p>
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#openstef.model.objective.LGBRegressorObjective.get_early_stopping_callback">
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         LGBRegressorObjective.get_early_stopping_callback()
+        </span>
+       </code>
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#openstef.model.objective.LGBRegressorObjective.get_params">
        <code class="docutils literal notranslate">
         <span class="pre">
@@ -1569,6 +1611,15 @@ For each hour of the day the std of the difference is calculated.</p>
        <code class="docutils literal notranslate">
         <span class="pre">
          RegressorObjective.get_default_values()
+        </span>
+       </code>
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#openstef.model.objective.RegressorObjective.get_early_stopping_callback">
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         RegressorObjective.get_early_stopping_callback()
         </span>
        </code>
       </a>
@@ -1674,6 +1725,15 @@ For each hour of the day the std of the difference is calculated.</p>
        <code class="docutils literal notranslate">
         <span class="pre">
          XGBRegressorObjective.get_default_values()
+        </span>
+       </code>
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#openstef.model.objective.XGBRegressorObjective.get_early_stopping_callback">
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         XGBRegressorObjective.get_early_stopping_callback()
         </span>
        </code>
       </a>
